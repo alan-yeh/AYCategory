@@ -1,0 +1,16 @@
+PODS:
+  - AYCategory (1.0.0)
+
+DEPENDENCIES:
+  - AYCategory (from `../`)
+
+EXTERNAL SOURCES:
+  AYCategory:
+    :path: ../
+
+SPEC CHECKSUMS:
+  AYCategory: d8f74f93c3a746763be4175164abc33302d4fd24
+
+PODFILE CHECKSUM: e874cec83fe77e768e2d6d813a64f40ef2c704d2
+
+COCOAPODS: 1.0.0
