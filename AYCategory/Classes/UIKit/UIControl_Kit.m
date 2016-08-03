@@ -8,10 +8,8 @@
 
 #import "UIControl_Kit.h"
 #import "NSString_Kit.h"
-#import "NSObject_Runtime.h"
-#import "AYBlockInvocation.h"
-#import <objc/runtime.h>
 #import <objc/message.h>
+#import <AYRuntime/AYRuntime.h>
 
 #define AY_EVENT_SEP @"__ay_event__"
 
@@ -21,7 +19,7 @@
         [self ay_addHandler:^(__strong id sender, UIControlEvents events, UIEvent *event) {
             AYBlockInvocation *invocation = [AYBlockInvocation invocationWithBlock:handler];
             
-            NSUInteger argCount = invocation.methodSignature.numberOfArguments;
+            NSUInteger argCount = invocation.blockSignature.signature.numberOfArguments;
             
             if (argCount > 1) {
                 [invocation setArgument:&sender atIndex:1];
@@ -45,10 +43,8 @@
  *  保存Handlers的实例
  */
 - (NSMutableDictionary<NSNumber/*UIControlEvents*/*, NSMutableArray<AYEventHandler> *> *)_ay_operations{
-    AYAssociatedKeyAndNotes(AY_OPERATION_KEY, "保存Handlers的实例");
-    return [self ay_associatedObjectForKey:AY_OPERATION_KEY storeProlicy:AYStoreUsingRetainNonatomic setDefault:^id{
-        return [NSMutableDictionary new];
-    }];
+    objc_AssociationKeyAndNotes(AY_OPERATION_KEY, "保存Handlers的实例");
+    return objc_getAssociatedDefaultObject(self, AY_OPERATION_KEY, [NSMutableDictionary new], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 /**

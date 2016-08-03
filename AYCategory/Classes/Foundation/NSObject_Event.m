@@ -7,11 +7,11 @@
 //
 
 #import "NSObject_Event.h"
-#import "NSObject_Runtime.h"
 #import "NSDictionary_Kit.h"
 #import "function.h"
 #import "convenientmacros.h"
 #import <objc/message.h>
+#import <AYRuntime/AYDeallocNotifier.h>
 
 @interface AYEventReceiver : NSObject
 @property (nonatomic, weak) id receiver;
@@ -95,12 +95,12 @@ static NSHashTable<AYEventReceiver *> *lowReceiver(NSString *event){
     }
     [receiverHolder() addObject:receiver];
     
-    [observer ay_notificateWhenDealloc:^{
+    [observer ay_notifyWhenDealloc:^{
         [receiverHolder() removeObject:receiver];
     }];
     
     if (sender) {
-        [sender ay_notificateWhenDealloc:^{
+        [sender ay_notifyWhenDealloc:^{
             [receiverHolder() removeObject:receiver];
         }];
     }

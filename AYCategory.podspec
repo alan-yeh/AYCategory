@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AYCategory'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'Convenient categories.'
 
   s.homepage         = 'https://github.com/alan-yeh/AYCategory'
@@ -21,4 +21,5 @@ Pod::Spec.new do |s|
   s.source_files = 'AYCategory/Classes/**/*'
   s.public_header_files = 'AYCategory/Classes/**/*.h'
   s.frameworks = 'UIKit'
+  s.dependency 'AYRuntime'
 end
