@@ -5,24 +5,17 @@
 [![License](https://img.shields.io/cocoapods/l/AYCategory.svg?style=flat)](http://cocoapods.org/pods/AYCategory)
 [![Platform](https://img.shields.io/cocoapods/p/AYCategory.svg?style=flat)](http://cocoapods.org/pods/AYCategory)
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
-
-## Installation
-
-AYCategory is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+## 引用
+　　使用[CocoaPods](http://cocoapods.org)可以很方便地引入AYCategory。Podfile添加AYCategory的依赖。
 
 ```ruby
 pod "AYCategory"
 ```
 
-## Author
+## 简介
+　　AYCategory中包含了大量UIKit和Foundation的便利category，可以极大地提升开发效率。
 
-Alan Yeh, alan@yerl.cn
+　　不定时更新。
 
 ## License
 

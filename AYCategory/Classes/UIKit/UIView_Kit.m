@@ -15,7 +15,7 @@
     [self.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
 }
 AYAssociatedKeyAndNotes(AY_VIEW_TAG_OBJECT, "Store the tag value");
-- (void)setPs_tag:(id)ay_tag useStorePolicy:(AYStorePolicy)plolicy{
+- (void)setAy_tag:(id)ay_tag useStorePolicy:(AYStorePolicy)plolicy{
     [self ay_setAssociatedObject:ay_tag forKey:AY_VIEW_TAG_OBJECT usingProlicy:plolicy];
 }
 
@@ -23,7 +23,7 @@ AYAssociatedKeyAndNotes(AY_VIEW_TAG_OBJECT, "Store the tag value");
     return [self ay_associatedObjectForKey:AY_VIEW_TAG_OBJECT];
 }
 
-- (void)setPs_tag:(id)ay_tag{
+- (void)setAy_tag:(id)ay_tag{
     returnIf(ay_tag == nil);
     [self ay_setAssociatedObject:ay_tag forKey:AY_VIEW_TAG_OBJECT usingProlicy:AYStoreUsingRetainNonatomic];
 }

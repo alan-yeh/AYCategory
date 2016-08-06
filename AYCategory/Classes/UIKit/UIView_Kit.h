@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)ay_instanceWithNibName:(nullable NSString *)nibNameOrNil bundel:(nullable NSBundle *)nibBundleOrNil;/**< 使用xib初始化. */
 
 @property (nonatomic, nullable) id ay_tag; /**< 使用Strong策略保存Tag值 */
-- (void)setPs_tag:(id)ay_tag useStorePolicy:(AYStorePolicy)plolicy; /**< 使用相关策略保存Tag值 */
+- (void)setAy_tag:(id)ay_tag useStorePolicy:(AYStorePolicy)plolicy; /**< 使用相关策略保存Tag值 */
 
 - (void)ay_clearSubviews; /**< 清除所有子视图 */
 - (__kindof UIViewController *)ay_viewController;/**< 查找包含此View的Controller. */
