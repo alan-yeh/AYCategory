@@ -8,7 +8,7 @@
 
 #import "NSObject_KVO.h"
 #import "NSDictionary_Kit.h"
-#import "NSObject_Runtime.h"
+#import <AYRuntime/AYRuntime.h>
 
 @interface AYKVOObserver : NSObject
 @property (nonatomic, strong) NSMutableDictionary<NSString *, NSMutableArray *> *blocks;
@@ -16,12 +16,8 @@
 
 @implementation NSObject (AYKVO)
 - (AYKVOObserver *)ay_observer{
-    AYAssociatedKeyAndNotes(AY_KVO_OBSERVER_KEY, "保存观察者的实例");
-    return [self ay_associatedObjectForKey:AY_KVO_OBSERVER_KEY
-                              storeProlicy:AYStoreUsingRetainNonatomic
-                                setDefault:^id _Nonnull{
-                                    return [AYKVOObserver new];
-                                }];
+    objc_AssociationKeyAndNotes(AY_KVO_OBSERVER_KEY, "保存观察者的实例");
+    return objc_getAssociatedDefaultObject(self, AY_KVO_OBSERVER_KEY, [AYKVOObserver new], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (void)ay_addObserver:(void (^)(id _Nonnull, NSDictionary<NSString *,id> * _Nonnull))block forKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options{
