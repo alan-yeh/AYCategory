@@ -45,10 +45,11 @@
     });
 }
 
-- (void)ay_performBlockLocked:(dispatch_block_t)block{
+- (void)ay_dispatch_locked:(dispatch_block_t)block{
     static OSSpinLock aspect_lock = OS_SPINLOCK_INIT;
     OSSpinLockLock(&aspect_lock);
     block();
     OSSpinLockUnlock(&aspect_lock);
 }
+
 @end
