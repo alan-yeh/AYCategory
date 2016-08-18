@@ -9,7 +9,7 @@
 #import "UIImage_Kit.h"
 #import "UIColor_Kit.h"
 #import "UIView_Kit.h"
-#import "convenientmacros.h"
+#import "aycategory_macros.h"
 
 @implementation UIImage (Kit)
 - (instancetype)ay_imageResized{

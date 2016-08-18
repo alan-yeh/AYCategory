@@ -7,7 +7,7 @@
 //
 
 #import "NSArray_Kit.h"
-#import "convenientmacros.h"
+#import "aycategory_macros.h"
 
 @implementation NSArray (AYSearch)
 - (NSArray *)ay_arrayWithCondition:(BOOL (^)(id _Nonnull))condition{

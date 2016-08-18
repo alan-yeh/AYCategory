@@ -7,7 +7,7 @@
 //
 
 #import "NSNull_Kit.h"
-#import "convenientmacros.h"
+#import "aycategory_macros.h"
 
 @implementation NSNull (Safe)
 

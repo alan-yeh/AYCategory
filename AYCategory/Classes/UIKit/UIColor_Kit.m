@@ -8,7 +8,7 @@
 
 #import "UIColor_Kit.h"
 #import "NSString_Kit.h"
-#import "convenientmacros.h"
+#import "aycategory_macros.h"
 
 @implementation UIColor (Kit)
 +(UIColor *)ay_randomColor{

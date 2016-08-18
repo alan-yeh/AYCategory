@@ -7,7 +7,7 @@
 //
 
 #import "AYJson.h"
-#import "convenientmacros.h"
+#import "aycategory_macros.h"
 
 @implementation NSString (Json)
 - (id)ay_jsonContainer{

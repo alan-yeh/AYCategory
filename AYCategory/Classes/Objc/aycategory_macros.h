@@ -6,8 +6,8 @@
 //
 //
 
-#ifndef AY_CONVENIENT_MACROS_H
-#define AY_CONVENIENT_MACROS_H
+#ifndef AY_CATEGORY_CONVENIENT_MACROS_H
+#define AY_CATEGORY_CONVENIENT_MACROS_H
 
 #define returnValIf(condition, val) if (!!(condition)){ return val;}
 #define returnIf(condition)         if (!!(condition)){ return;    }

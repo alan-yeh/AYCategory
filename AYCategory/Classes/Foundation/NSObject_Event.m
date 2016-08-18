@@ -8,8 +8,8 @@
 
 #import "NSObject_Event.h"
 #import "NSDictionary_Kit.h"
-#import "function.h"
-#import "convenientmacros.h"
+#import "aycategory_function.h"
+#import "aycategory_macros.h"
 #import <objc/message.h>
 #import <AYRuntime/AYDeallocNotifier.h>
 

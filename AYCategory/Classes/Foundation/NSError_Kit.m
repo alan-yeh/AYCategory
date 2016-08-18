@@ -8,7 +8,7 @@
 
 #import "NSError_Kit.h"
 #import "NSBundle_Kit.h"
-#import "convenientmacros.h"
+#import "aycategory_macros.h"
 
 @implementation NSError (AYKit)
 + (instancetype)ay_errorWithLocalizedDescription:(NSString *)description{

@@ -7,7 +7,7 @@
 //
 
 #import "NSSet_Kit.h"
-#import "convenientmacros.h"
+#import "aycategory_macros.h"
 
 @implementation NSSet (AYSearch)
 - (NSSet *)ay_setWithCondition:(BOOL (^)(id _Nonnull))condition{

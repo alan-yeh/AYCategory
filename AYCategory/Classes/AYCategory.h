@@ -6,6 +6,6 @@
 //
 //
 
-#import <AYCategory/Foundation.h>
-#import <AYCategory/UIKit.h>
-#import <AYCategory/Objc.h>
+#import <AYCategory/AYCategory_Foundation_Headers.h>
+#import <AYCategory/AYCategory_UIKit_Headers.h>
+#import <AYCategory/AYCategory_Objc_Headers.h>

@@ -7,7 +7,7 @@
 //
 
 #import "NSString_Kit.h"
-#import "convenientmacros.h"
+#import "aycategory_macros.h"
 
 NSString *NSStringWithFormat(NSString *format, ...){
     va_list args;

@@ -7,7 +7,7 @@
 //
 
 #import "UIView_Kit.h"
-#import "convenientmacros.h"
+#import "aycategory_macros.h"
 
 @implementation UIView (Kit)
 @dynamic ay_tag;

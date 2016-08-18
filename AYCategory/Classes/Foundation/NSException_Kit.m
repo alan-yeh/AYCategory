@@ -7,8 +7,8 @@
 //
 
 #import "NSException_Kit.h"
-#import "function.h"
-#import "convenientmacros.h"
+#import "aycategory_function.h"
+#import "aycategory_macros.h"
 #import "NSDate_Kit.h"
 
 @implementation NSException (Kit)
