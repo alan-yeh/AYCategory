@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define NSAssertError(condition, desc, ...) \
+#define AYAssertError(condition, desc, ...) \
    do { \
       __PRAGMA_PUSH_NO_EXTRA_ARG_WARNINGS \
       if (!(condition)) { \
