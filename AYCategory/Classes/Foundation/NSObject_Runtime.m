@@ -8,7 +8,7 @@
 
 #import "NSObject_Runtime.h"
 #import "aycategory_macros.h"
-#import <AYRuntime/runtime.h>
+#import <AYRuntime/AYRuntime.h>
 
 @implementation NSObject (AYRuntime)
 
