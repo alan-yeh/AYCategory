@@ -21,14 +21,16 @@
     // Put setup code here. This method is called before the invocation of each test method in the class.
 }
 
-- (void)tearDown
-{
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testExample
-{
+- (void)testOptional{
+    NSArray *optional_obj1 = nil;
+    
+    NSArray *obj1 = AYOptional(NSArray, optional_obj1);
+    XCTAssert(obj1 != nil && [obj1 isKindOfClass:[NSArray class]]);
+    
+    NSMutableArray *optional_obj2 = nil;
+    NSMutableArray *obj2 = AYOptional(NSMutableArray, optional_obj2);
+    XCTAssert(obj2 != nil && [obj2 isKindOfClass:[NSMutableArray class]]);
+    
 }
 
 @end

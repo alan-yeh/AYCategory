@@ -10,6 +10,7 @@
 
 #import <AYCategory/AYBase64Encoding.h>
 #import <AYCategory/AYJson.h>
+#import <AYCategory/AYOptional.h>
 #import <AYCategory/NSArray_Kit.h>
 #import <AYCategory/NSBundle_Kit.h>
 #import <AYCategory/NSData_Kit.h>

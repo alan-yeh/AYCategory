@@ -19,7 +19,7 @@
         [self ay_addHandler:^(__strong id sender, UIControlEvents events, UIEvent *event) {
             AYBlockInvocation *invocation = [AYBlockInvocation invocationWithBlock:handler];
             
-            NSUInteger argCount = invocation.blockSignature.signature.numberOfArguments;
+            NSUInteger argCount = invocation.signature.numberOfArguments;
             
             if (argCount > 1) {
                 [invocation setArgument:&sender atIndex:1];
