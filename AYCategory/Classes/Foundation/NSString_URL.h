@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+#define NSGBKEncoding CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000)
+
 @interface NSString (AY_URL)
-- (NSString *)ay_URLEncoding;/**< url encode */
-- (NSString *)ay_URLDecoding;/**< url decode */
-- (NSString *)ay_URLParamForKey:(NSString *)aKey;/**< 获取URL String里的参数的值 */
+- (NSString *)ay_URLEncodingWithEncoding:(NSStringEncoding)encoding;/**< url encode */
+- (NSString *)ay_URLDecodingWithEncoding:(NSStringEncoding)encoding;/**< url decode */
 @end
