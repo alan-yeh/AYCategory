@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define NSGBKEncoding CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000)
+#define NSGBKStringEncoding CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000)
 
 @interface NSString (AY_URL)
 - (NSString *)ay_URLEncodingWithEncoding:(NSStringEncoding)encoding;/**< url encode */
