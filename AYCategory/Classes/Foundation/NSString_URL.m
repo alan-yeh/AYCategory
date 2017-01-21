@@ -24,7 +24,7 @@
                             withString:@" "
                                options:NSLiteralSearch
                                  range:NSMakeRange(0, [string length])];
-    return [string stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    return [string stringByReplacingPercentEscapesUsingEncoding:encoding];
 }
 
 @end
