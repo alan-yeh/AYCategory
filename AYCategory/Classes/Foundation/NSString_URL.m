@@ -13,8 +13,8 @@
     NSString *encodedString = (NSString *)
     CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
                                                               (CFStringRef)self,
-                                                              NULL,
-                                                              CFSTR("!*'();:@&=+$,/?%#[] "),
+                                                              (CFStringRef)@"!$&'()*+,-./:;=?@_~#[]",
+                                                              (CFStringRef)@"% ",
                                                               CFStringConvertNSStringEncodingToEncoding(encoding)));
     return encodedString;
 }
