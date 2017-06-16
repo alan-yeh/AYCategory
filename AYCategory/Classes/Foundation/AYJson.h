@@ -25,12 +25,14 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NSDictionary (Json)
 - (NSData *)ay_toJsonData;/**< 将NSDictionary转成Json格式的NSData. */
 - (NSString *)ay_toJsonString;/**< 将NSDictionary转成Json格式的NSString. */
+- (NSString *)ay_toPrettyJsonString;/**< 将NSDictionary转成格式化过的Json格式的NSString. */
 @end
 
 
 @interface NSArray (Json)
 - (NSData *)ay_toJsonData;/**< 将NSArray转成Json格式的NSData. */
 - (NSString *)ay_toJsonString;/**< 将NSArray转成Json格式的NSString. */
+- (NSString *)ay_toPrettyJsonString;/**< 将NSArray转成格式化过的Json格式的NSString. */
 @end
 
 

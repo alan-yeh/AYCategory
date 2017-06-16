@@ -45,6 +45,11 @@
     NSData *data = [NSJSONSerialization dataWithJSONObject:self options:kNilOptions error:nil];
     return data == nil ? nil : [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 }
+
+- (NSString *)ay_toPrettyJsonString{
+    NSData *data = [NSJSONSerialization dataWithJSONObject:self options:NSJSONWritingPrettyPrinted error:nil];
+    return data == nil ? nil : [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+}
 @end
 
 @implementation NSArray (Json)
@@ -55,6 +60,11 @@
 
 - (NSString *)ay_toJsonString{
     NSData *data = [NSJSONSerialization dataWithJSONObject:self options:kNilOptions error:nil];
+    return data == nil ? nil : [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+}
+
+- (NSString *)ay_toPrettyJsonString{
+    NSData *data = [NSJSONSerialization dataWithJSONObject:self options:NSJSONWritingPrettyPrinted error:nil];
     return data == nil ? nil : [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 }
 @end
