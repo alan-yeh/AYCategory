@@ -18,6 +18,17 @@
                                                               CFStringConvertNSStringEncodingToEncoding(encoding)));
     return encodedString;
 }
+
+- (NSString *)ay_URLComponentEncodingWithEncoding:(NSStringEncoding)encoding{
+    NSString *encodedString = (NSString *)
+    CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
+                                                              (CFStringRef)self,
+                                                              NULL,
+                                                              CFSTR(";/?:@&=+$,#"),
+                                                              CFStringConvertNSStringEncodingToEncoding(encoding)));
+    return encodedString;
+}
+
 - (NSString *)ay_URLDecodingWithEncoding:(NSStringEncoding)encoding{
     NSMutableString * string = [NSMutableString stringWithString:self];
     [string replaceOccurrencesOfString:@"+"

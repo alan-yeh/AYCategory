@@ -12,5 +12,7 @@
 
 @interface NSString (AY_URL)
 - (NSString *)ay_URLEncodingWithEncoding:(NSStringEncoding)encoding;/**< url encode, 对应前端的encodeURI */
+- (NSString *)ay_URLComponentEncodingWithEncoding:(NSStringEncoding)encoding;/**< url encode, 对应前端的encodeURIComponent */
+
 - (NSString *)ay_URLDecodingWithEncoding:(NSStringEncoding)encoding;/**< url decode */
 @end
