@@ -24,7 +24,7 @@
     CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
                                                               (CFStringRef)self,
                                                               NULL,
-                                                              CFSTR(";/?:@&=+$,#"),
+                                                              CFSTR(";/?:@&=+$,#'"),
                                                               CFStringConvertNSStringEncodingToEncoding(encoding)));
     return encodedString;
 }
