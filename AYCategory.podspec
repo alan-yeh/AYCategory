@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AYCategory'
-  s.version          = '1.0.16'
+  s.version          = '1.0.17'
   s.summary          = 'Convenient categories.'
 
   s.homepage         = 'https://github.com/alan-yeh/AYCategory'

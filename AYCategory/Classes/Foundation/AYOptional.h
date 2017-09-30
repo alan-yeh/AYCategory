@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-#define AYOptional(type, obj) (obj ?: (typeof(obj))[type ay_optional])
+#define AYOptional(type, obj) ((type *)(obj ?: [type ay_optional]))
 
 @protocol AYOptional <NSObject>
 + (id)ay_optional;
