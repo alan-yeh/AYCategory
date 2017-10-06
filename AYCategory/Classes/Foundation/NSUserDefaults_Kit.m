@@ -14,7 +14,7 @@
     [self synchronize];
 }
 
-- (id)ay_objectForKey:(NSString *)key setDefault:(id _Nonnull (^)())defaultValue{
+- (id)ay_objectForKey:(NSString *)key setDefault:(id _Nonnull (^)(void))defaultValue{
     return [self objectForKey:key] ?: ({
         id value = defaultValue();
         [self ay_setObject:value forKey:key];

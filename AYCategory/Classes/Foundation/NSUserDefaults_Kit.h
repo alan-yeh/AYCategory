@@ -11,6 +11,6 @@
 NS_ASSUME_NONNULL_BEGIN
 @interface NSUserDefaults (Kit)
 - (void)ay_setObject:(id)value forKey:(NSString *)key;/**< 保存键值对(已同步) */
-- (id)ay_objectForKey:(NSString *)key setDefault:(id (^)())defaultValue;/**< 获取object，如果没有，添加并返回defaultValue(已同步) */
+- (id)ay_objectForKey:(NSString *)key setDefault:(id (^)(void))defaultValue;/**< 获取object，如果没有，添加并返回defaultValue(已同步) */
 @end
 NS_ASSUME_NONNULL_END

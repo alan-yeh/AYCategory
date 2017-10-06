@@ -9,7 +9,7 @@
 #import "NSDictionary_Kit.h"
 
 @implementation NSDictionary (Kit)
-- (id)ay_objectForKey:(id)key useDefault:(id (^)())defaultValue{
+- (id)ay_objectForKey:(id)key useDefault:(id (^)(void))defaultValue{
     return [self objectForKey:key] ?: defaultValue();
 }
 - (BOOL)ay_containsKey:(id)key{
@@ -18,7 +18,7 @@
 @end
 
 @implementation NSMutableDictionary (Kit)
-- (id)ay_objectForKey:(id)key setDefault:(id (^)())defaultValue{
+- (id)ay_objectForKey:(id)key setDefault:(id (^)(void))defaultValue{
     return [self objectForKey:key] ?: ({id value = defaultValue(); [self setObject:value forKey:key]; value;});
 }
 @end
