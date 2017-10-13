@@ -1,5 +1,5 @@
 PODS:
-  - AYCategory (1.0.18):
+  - AYCategory (1.0.19):
     - AYRuntime
   - AYRuntime (1.0.5)
 
@@ -11,9 +11,9 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  AYCategory: dc864468f3ef2c39b40dccbacb2f8dca2cd4d6e8
+  AYCategory: 01fca0ad3cd79f0a169b5df3e58be55d192dd364
   AYRuntime: 2ae72af90a83d4c9427a0d7bf6188b0a7191af87
 
 PODFILE CHECKSUM: e874cec83fe77e768e2d6d813a64f40ef2c704d2
 
-COCOAPODS: 1.4.0.beta.1
+COCOAPODS: 1.3.1

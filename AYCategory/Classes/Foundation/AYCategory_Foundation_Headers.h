@@ -27,4 +27,5 @@
 #import <AYCategory/NSString_Encyption.h>
 #import <AYCategory/NSString_Kit.h>
 #import <AYCategory/NSString_URL.h>
+#import <AYCategory/NSURL_Kit.h>
 #import <AYCategory/NSUserDefaults_Kit.h>

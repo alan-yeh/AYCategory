@@ -16,6 +16,7 @@
                                                               CFSTR(";/?:@&=+$,#"),
                                                               NULL,
                                                               CFStringConvertNSStringEncodingToEncoding(encoding)));
+    
     return encodedString;
 }
 
@@ -24,7 +25,7 @@
     CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
                                                               (CFStringRef)self,
                                                               NULL,
-                                                              CFSTR(";/?:@&=+$,#'"),
+                                                              CFSTR(";/?:@&=+$,#'"), // 这里加多了一个'号
                                                               CFStringConvertNSStringEncodingToEncoding(encoding)));
     return encodedString;
 }
