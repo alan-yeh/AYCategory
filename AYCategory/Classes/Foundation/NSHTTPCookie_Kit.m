@@ -15,7 +15,7 @@
         result = [result stringByAppendingString:@";secure"];
     }
     if (self.isHTTPOnly) {
-        result = [result stringByAppendingString:@";HttpOnly"]
+        result = [result stringByAppendingString:@";HttpOnly"];
     }
     return result;
 }
