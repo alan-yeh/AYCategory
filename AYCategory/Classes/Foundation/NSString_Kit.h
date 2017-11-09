@@ -13,6 +13,7 @@ FOUNDATION_EXTERN NSString *NSStringWithFormat(NSString *format, ...) NS_FORMAT_
 
 @interface NSString (AY_Kit)
 + (NSString *)ay_randomStringWithLenght:(NSUInteger)lenght;/**< 随机字符串 */
++ (NSString *)ay_uuidString;
 
 - (BOOL)ay_containsString:(NSString *)aString;/**< 是否包含字符串 */
 - (BOOL)ay_isEquals:(NSString *)anotherString;/**< 大小写敏感比较 */

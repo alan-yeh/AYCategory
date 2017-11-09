@@ -93,5 +93,10 @@
     NSLog(@"%@", url);
         
 }
+
+- (void)testUUID{
+    NSString *uuid = [NSString ay_uuidString];
+    NSLog(uuid, nil);
+}
 @end
 

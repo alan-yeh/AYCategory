@@ -24,6 +24,15 @@ NSString *NSStringWithFormat(NSString *format, ...){
     return [[NSString alloc] initWithBytes:data length:lenght encoding:NSUTF8StringEncoding];
 }
 
++ (NSString *)ay_uuidString{
+    CFUUIDRef uuidRef = CFUUIDCreate(kCFAllocatorDefault);
+    CFStringRef strRef = CFUUIDCreateString(kCFAllocatorDefault , uuidRef);
+    NSString *uuidString = (__bridge NSString*)strRef;
+    CFRelease(strRef);
+    CFRelease(uuidRef);
+    return uuidString;
+}
+
 - (BOOL)ay_containsString:(NSString *)aString{
     return [self rangeOfString:aString].location != NSNotFound;
 }
