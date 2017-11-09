@@ -25,12 +25,7 @@ NSString *NSStringWithFormat(NSString *format, ...){
 }
 
 + (NSString *)ay_uuidString{
-    CFUUIDRef uuidRef = CFUUIDCreate(kCFAllocatorDefault);
-    CFStringRef strRef = CFUUIDCreateString(kCFAllocatorDefault , uuidRef);
-    NSString *uuidString = (__bridge NSString*)strRef;
-    CFRelease(strRef);
-    CFRelease(uuidRef);
-    return uuidString;
+    return [NSUUID UUID].UUIDString;
 }
 
 - (BOOL)ay_containsString:(NSString *)aString{
