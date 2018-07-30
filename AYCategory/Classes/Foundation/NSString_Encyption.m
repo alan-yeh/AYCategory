@@ -31,23 +31,49 @@
 
 #pragma mark - 3DES
 - (NSString *)ay_3DESEncryptWithKey:(NSString *)aKey{
-    return [self _ay_3DESOperation:kCCEncrypt withKey:aKey];
+    const char* charKey = [aKey UTF8String];
+    char p[24];
+    memset(p, 0x0, 24);
+    memccpy(p, charKey, 0, 24);
+    
+    return _3des_operation(self, kCCEncrypt, p);
 }
 
 - (NSString *)ay_3DESDecryptWithKey:(NSString *)aKey{
-    return [self _ay_3DESOperation:kCCDecrypt withKey:aKey];
+    const char* charKey = [aKey UTF8String];
+    char p[24];
+    memset(p, 0x0, 24);
+    memccpy(p, charKey, 0, 24);
+    
+    return _3des_operation(self, kCCDecrypt, p);
 }
 
-- (NSString *)_ay_3DESOperation:(CCOperation)operation withKey:(NSString *)aKey{
+- (NSString *)ay_3DESEncryptWithKeyData:(NSData *)aKey{
+    char p[aKey.length];
+    memset(p, 0x0, aKey.length);
+    [aKey getBytes:p length:aKey.length];
+    
+    return _3des_operation(self, kCCEncrypt, p);
+}
+
+- (NSString *)ay_3DESDecryptWithKeyData:(NSData *)aKey{
+    char p[aKey.length];
+    memset(p, 0x0, aKey.length);
+    [aKey getBytes:p length:aKey.length];
+    
+    return _3des_operation(self, kCCDecrypt, p);
+}
+
+NSString *_3des_operation(NSString *origin, CCOperation operation, char* p){
     const void *vplainText;
     size_t plainTextBufferSize;
     
     if (operation == kCCDecrypt) { //解密
-        NSData *EncryptData = [self ay_base64DecodedData];
+        NSData *EncryptData = [origin ay_base64DecodedData];
         plainTextBufferSize = [EncryptData length];
         vplainText = [EncryptData bytes];
     }else {
-        NSData *data = [self dataUsingEncoding:NSUTF8StringEncoding];
+        NSData *data = [origin dataUsingEncoding:NSUTF8StringEncoding];
         plainTextBufferSize = [data length];
         vplainText = (const void *)[data bytes];
     }
@@ -59,11 +85,6 @@
     bufferPtrSize = (plainTextBufferSize + kCCBlockSize3DES) & ~(kCCBlockSize3DES - 1);
     bufferPtr = malloc(bufferPtrSize * sizeof(uint8_t));
     memset((void *)bufferPtr, 0x0, bufferPtrSize);
-    
-    const char* charKey = [aKey UTF8String];
-    char p[24];
-    memset(p, 0x0, 24);
-    memccpy(p, charKey, 0, 24);
     
     CCCryptorStatus ccStatus = CCCrypt(operation,
                                        kCCAlgorithm3DES,

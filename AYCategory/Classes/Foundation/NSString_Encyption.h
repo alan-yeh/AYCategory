@@ -13,4 +13,6 @@
 
 - (NSString *)ay_3DESEncryptWithKey:(NSString *)aKey;/**< 3DES加密 */
 - (NSString *)ay_3DESDecryptWithKey:(NSString *)aKey;/**< 3DES解密 */
+- (NSString *)ay_3DESEncryptWithKeyData:(NSData *)aKey;/**< 3DES加密 */
+- (NSString *)ay_3DESDecryptWithKeyData:(NSData *)aKey;/**< 3DES解密 */
 @end

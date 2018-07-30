@@ -98,5 +98,15 @@
     NSString *uuid = [NSString ay_uuidString];
     NSLog(uuid, nil);
 }
+
+- (void)test3Des{
+    NSString *encodedStr = @"Wefm6vKOrnQiOB0wa519C6I4ItVd0zIFKXHeeqa07pv8hbkC3e6kRLxSpnWYIKIchNkK1tSTOxMRDFF7tdL7i7xSpnWYIKIcsSHs0l/THq+GAHGIbXF3Q3Fw+mivbTXZENkHmQt29rdqenSCDUwybbxSpnWYIKIcvFKmdZggohwr5WcQtufdoQkn2xQ5z+zsvFKmdZggohwv0PtTjyxx1tzl7G4oQt5WvFKmdZggohy8UqZ1mCCiHKilVCRnftBL5hLf+mY2610mYtBtchol/LxSpnWYIKIcdq1cVBvPsMm8UqZ1mCCiHD8NWcef9I0sIw9sswVkfJwaUw0JSvAzasTKMQIUcV6BvFKmdZggohy8UqZ1mCCiHMIAQ119thm6GfKUuf1IIc9/Ikt4qosfOalPucfguj9SvFKmdZggohy8UqZ1mCCiHBDpSxA+DITGCPx1Gb0bN4v40XxABgl+4+M33nO3FLMovFKmdZggohxBfEfL2i6YhFwGtJ3V/qjKDSkmYsiGJGvZZIKGGqOJXbxSpnWYIKIcvFKmdZggohxBfEfL2i6YhNd6bjG5MnqVvFKmdZggohy8UqZ1mCCiHLST0D1PEzhDvFKmdZggohx0jQnfxoSzyXX695UtGj02f9//fITLyLAhSBQt4bGAPAkn2xQ5z+zsRxP+ArJ6BOg7gt9KEz52lrxSpnWYIKIcNqnNCaAymZb986SmL5PaVNUp3JmJkuJDvFKmdZggohzehAhQGJ/dbTUKseSEz6kzJOhmFbOH6Hp+yufttTcRh7xSpnWYIKIcZhl2GJgfHsjQ+5TamJgQ/KZFAcZM9op4";
+    
+    NSString *key = @"pHywmA5KivEqN7x/Qz0jCzjca8dKYceM";
+    
+    NSString *result = [encodedStr ay_3DESDecryptWithKeyData:key.ay_base64DecodedData];
+    
+    NSLog(@"%@", result);
+}
 @end
 
