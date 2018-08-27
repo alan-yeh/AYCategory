@@ -29,8 +29,11 @@
         domain = domain ?: @"none domain";
     });
     
-    va_args(format);
+    
+    va_list format_args;
+    va_start(format_args, format);
     NSString *reason = [[NSString alloc] initWithFormat:format arguments:format_args];
+    va_end(format_args);
     
     return [self errorWithDomain:domain code:-1000 userInfo:@{
                                                               NSLocalizedDescriptionKey: reason,

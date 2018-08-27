@@ -140,8 +140,13 @@ NSString *NSStringWithFormat(NSString *format, ...){
 }
 
 - (NSMutableString *)ay_appendFormat:(NSString *)format, ...{
-    va_args(format);
-    [self appendString:[[NSString alloc] initWithFormat:format arguments:format_args]];
+    
+    va_list format_args;
+    va_start(format_args, format);
+    NSString *str = [[NSString alloc] initWithFormat:format arguments:format_args];
+    va_end(format_args);
+    
+    [self appendString:str];
     return self;
 }
 

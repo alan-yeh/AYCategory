@@ -22,6 +22,7 @@
       }                         \
    } while(0)
 
+
 //消除[NSObject performSelector:]引起的警告
 #define SuppressPerformSelectorLeakWarning(action)                        \
    do {                                                                   \
@@ -30,22 +31,6 @@
       action;                                                             \
       _Pragma("clang diagnostic pop")                                     \
    } while (0)
-
-/**
- *  不定参数取值
- *
- *  示例:
- *  - (void)log:(NSString *)format, ...{
- *     va_args(format);
- *     NSString *info = [[NSString alloc] initWithFormat:format arguments:format_args];
- *     NSLog(info, nil);
- *   }
- */
-#define va_args(arg_start)                  \
-   va_list arg_start##_##args;              \
-   va_start(arg_start##_##args, arg_start); \
-   va_end(arg_start##_##args);
-
 
 
 #endif
