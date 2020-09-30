@@ -14,6 +14,7 @@
 #import <AYCategory/NSArray_Kit.h>
 #import <AYCategory/NSBundle_Kit.h>
 #import <AYCategory/NSData_Kit.h>
+#import <AYCategory/NSData_Encryption.h>
 #import <AYCategory/NSDate_Kit.h>
 #import <AYCategory/NSDictionary_Kit.h>
 #import <AYCategory/NSError_Kit.h>
