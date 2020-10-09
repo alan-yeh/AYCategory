@@ -29,12 +29,13 @@ AYAssociatedKeyAndNotes(AY_VIEW_TAG_OBJECT, "Store the tag value");
 }
 
 - (UIViewController *)ay_viewController{
-    UIResponder *next;
-    while ((next = [self nextResponder])) {
+    UIResponder *next = [self nextResponder];
+    do {
         if ([next isKindOfClass:[UIViewController class]]) {
             return (UIViewController *)next;
         }
-    }
+        next = [next nextResponder];
+    } while (next != nil);
     return nil;
 }
 
