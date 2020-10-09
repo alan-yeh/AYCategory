@@ -108,5 +108,21 @@
     
     NSLog(@"%@", result);
 }
+
+- (void)testEncryption {
+    NSString *key = @"123456";
+    NSURL *url = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingString:@"WechatIMG1977.jpeg"]];
+    NSError *error;
+    NSData *data = [NSData dataWithContentsOfURL:url options:NSDataReadingUncached error:&error];
+    NSData *encryptedData = [data ay_3DESEncryptDataWithKey:key];
+    NSURL *encryptedURL = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingString:@"enc_WechatIMG1977.jpeg"]];
+    BOOL write = [encryptedData writeToFile:encryptedURL.path atomically:YES];
+    
+    NSURL *decryptedURL = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingString:@"dec_enc_WechatIMG1977.jpeg"]];
+    NSData *decData = [encryptedData ay_3DESDecryptDataWithKey:key];
+    [decData writeToFile:decryptedURL.path atomically:YES];
+    
+    XCTAssert(write);
+}
 @end
 
