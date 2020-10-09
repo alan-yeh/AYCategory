@@ -307,7 +307,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-AYCategory_Example/Pods-AYCategory_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-AYCategory_Example/Pods-AYCategory_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AYCategory/AYCategory.framework",
 				"${BUILT_PRODUCTS_DIR}/AYRuntime/AYRuntime.framework",
 			);
@@ -318,7 +318,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AYCategory_Example/Pods-AYCategory_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AYCategory_Example/Pods-AYCategory_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		651704C7C6B2BB3E78DB21A0 /* [CP] Check Pods Manifest.lock */ = {

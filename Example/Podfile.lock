@@ -1,5 +1,5 @@
 PODS:
-  - AYCategory (1.1.6):
+  - AYCategory (1.1.7):
     - AYRuntime
   - AYRuntime (1.0.5)
 
@@ -7,7 +7,7 @@ DEPENDENCIES:
   - AYCategory (from `../`)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  trunk:
     - AYRuntime
 
 EXTERNAL SOURCES:
@@ -15,9 +15,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AYCategory: 04429f335192929909ce3a051f1b067369fc7df1
+  AYCategory: 37140c8088682062e6549506126d654acc0d9e66
   AYRuntime: 2ae72af90a83d4c9427a0d7bf6188b0a7191af87
 
 PODFILE CHECKSUM: e874cec83fe77e768e2d6d813a64f40ef2c704d2
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.8.4
